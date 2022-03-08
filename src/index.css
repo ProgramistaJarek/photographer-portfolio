@@ -1,0 +1,155 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@layer components {
+  /*---------- nav ----------*/
+  .nav {
+    @apply font-['Lato'] bg-nav-img bg-cover h-screen relative;
+  }
+
+  .menu {
+    @apply bg-white flex justify-evenly py-6;
+  }
+
+  .introduction {
+    @apply text-white text-center mx-4 h-5/6 flex flex-col justify-center;
+  }
+
+  .introduction h1 {
+    @apply text-3xl font-bold mb-8 uppercase;
+  }
+
+  /*---------- photo-section ----------*/
+  .photo-section {
+    @apply flex flex-col items-center mt-10;
+  }
+
+  .photo-section h2 {
+    @apply text-xl font-bold mb-8;
+  }
+
+  .photo-section img {
+    @apply my-2;
+  }
+
+  .btn {
+    @apply bg-slate-100 p-4 rounded-full mb-4 mt-2;
+  }
+
+  /*---------- footer ----------*/
+  .footer {
+    @apply flex flex-col items-center bg-gray-700 text-white py-8;
+  }
+
+  .footer h2 {
+    @apply text-lg font-bold uppercase tracking-widest my-3;
+  }
+
+  .footer-container {
+    @apply flex flex-col items-center;
+  }
+
+  .footer-content p {
+    @apply my-2 font-medium tracking-wider text-center;
+  }
+
+  .links li {
+    @apply flex items-center justify-center py-1;
+  }
+
+  .links li a {
+    @apply ml-2;
+  }
+
+  /*---------- photos ----------*/
+  .photos {
+    @apply flex flex-col items-center mx-4;
+  }
+
+  .photos h2 {
+    @apply text-lg font-bold uppercase tracking-widest my-3;
+  }
+
+  .photos-conteiner {
+    @apply flex flex-wrap justify-evenly;
+  }
+
+  .column {
+    @apply flex-[45%] max-w-[45%];
+  }
+
+  .photos-conteiner img {
+    @apply my-8 mx-2 align-middle;
+  }
+
+  /*---------- about ----------*/
+  .about {
+    @apply flex flex-col mx-4 my-8;
+  }
+
+  .about-me {
+    @apply text-center mt-8;
+  }
+
+  .about-me h2 {
+    @apply font-bold text-xl tracking-wide mb-4;
+  }
+
+  /*---------- contact ----------*/
+  .contact {
+    @apply bg-slate-200 mx-4 my-10 p-4 rounded-md shadow-2xl;
+  }
+
+  .contact h2 {
+    @apply text-center;
+  }
+
+  .contact-form {
+    @apply flex flex-col;
+  }
+
+  .contact-form label {
+    @apply mt-4;
+  }
+
+  .contact-form input {
+    @apply p-2 rounded-md outline-none;
+  }
+
+  .contact-form textarea {
+    @apply p-2 rounded-md outline-none h-32;
+  }
+
+  .contact-form button {
+    @apply bg-orange-500 mt-5 p-2 rounded-md;
+  }
+
+  @media only screen and (min-width: 768px) {
+    .footer-container {
+      @apply flex-row;
+    }
+
+    .footer-content {
+      @apply mx-8;
+    }
+
+    .about {
+      @apply flex-row;
+    }
+
+    .about img {
+      @apply w-1/3;
+    }
+  }
+}
